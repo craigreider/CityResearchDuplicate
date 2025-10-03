@@ -3,7 +3,10 @@ from geopy.geocoders import Nominatim
 
 KILOMETERS_IN_MILE = 1.60934
 MILE_IN_KILOMETERS = 0.621371
+"""
+This module provides functionality to calculate driving distances between two cities
 
+"""
 def get_coordinates(city_name):
     """
     Geocodes a city name to get its coordinates.
