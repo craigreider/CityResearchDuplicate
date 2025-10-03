@@ -1,5 +1,6 @@
 import requests
 from geopy.geocoders import Nominatim
+#from geopy.distance import distance as geopy_distance
 
 KILOMETERS_IN_MILE = 1.60934
 MILE_IN_KILOMETERS = 0.621371
@@ -75,12 +76,6 @@ def get_driving_distance_osrm(origin_city, destination_city):
         return None, None
 
 def main():
-    # print('Current working directory:', os.getcwd())
-    # print('Python version:', sys.version)
-# Example usage
-# city1 = "Chicago, IL"
-# city2 = "New York, NY"
-    #city1 = "Turlock, CA"
     for city1 in ["Los Angeles, CA", "San Francisco, CA", "San Diego, CA", "Sacramento, CA", "Fresno, CA", "Bakersfield, CA", "Oakland, CA", "Anaheim, CA", "Santa Ana, CA", "Riverside, CA", "Stockton, CA"]:
         city2 = "San Jose, CA"
         distance, duration = get_driving_distance_osrm(city1, city2)
