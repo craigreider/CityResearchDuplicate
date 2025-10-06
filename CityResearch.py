@@ -92,9 +92,8 @@ def main():
         distance, duration = get_driving_distance_osrm(city1, city2)
 
         if distance is not None:
-            print(f"Driving distance from {city1} to {city2} is {distance:.2f} km.")
-            print(f"Driving distance from {city1} to {city2} is {distance*MILE_IN_KILOMETERS:.2f} miles.")
-            print(f"Driving duration is approximately {duration:.2f} minutes.")
+            print(f"Driving distance from {city1} to {city2} is {distance:.2f} km or {distance*MILE_IN_KILOMETERS:.2f} miles.")
+            print(f"Driving duration is {duration:.2f} minutes.")
 
 
 
