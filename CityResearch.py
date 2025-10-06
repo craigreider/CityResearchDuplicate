@@ -1,5 +1,6 @@
 import requests
 from geopy.geocoders import Nominatim
+import json
 #from geopy.distance import distance as geopy_distance
 
 KILOMETERS_IN_MILE = 1.60934
@@ -76,26 +77,19 @@ def get_driving_distance_osrm(origin_city, destination_city):
         return None, None
 
 def main():
-    for city1 in ["Los Angeles, CA", \
-                  "San Francisco, CA", \
-                  "San Diego, CA", \
-                  "Sacramento, CA", \
-                  "Fresno, CA", \
-                  "Bakersfield, CA", \
-                  "Oakland, CA", \
-                  "Rancho Palos Verdes, CA", \
-                  "Lemoore, CA", \
-                  "Riverside, CA", \
-                  "Stockton, CA"]:
-        
+    cities_file="./data/cities.json"
+    with open(cities_file,'r') as json_file:
+
+        cities_text=json_file.read()
+        cities=json.loads(cities_text)
+
+    for city1 in cities:    
         city2 = "San Jose, CA"
         distance, duration = get_driving_distance_osrm(city1, city2)
 
         if distance is not None:
             print(f"Driving distance from {city1} to {city2} is {distance:.2f} km or {distance*MILE_IN_KILOMETERS:.2f} miles.")
             print(f"Driving duration is {duration:.2f} minutes.")
-
-
 
 
 if __name__=='__main__':
