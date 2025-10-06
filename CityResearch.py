@@ -76,7 +76,18 @@ def get_driving_distance_osrm(origin_city, destination_city):
         return None, None
 
 def main():
-    for city1 in ["Los Angeles, CA", "San Francisco, CA", "San Diego, CA", "Sacramento, CA", "Fresno, CA", "Bakersfield, CA", "Oakland, CA", "Anaheim, CA", "Santa Ana, CA", "Riverside, CA", "Stockton, CA"]:
+    for city1 in ["Los Angeles, CA", \
+                  "San Francisco, CA", \
+                  "San Diego, CA", \
+                  "Sacramento, CA", \
+                  "Fresno, CA", \
+                  "Bakersfield, CA", \
+                  "Oakland, CA", \
+                  "Rancho Palos Verdes, CA", \
+                  "Lemoore, CA", \
+                  "Riverside, CA", \
+                  "Stockton, CA"]:
+        
         city2 = "San Jose, CA"
         distance, duration = get_driving_distance_osrm(city1, city2)
 
