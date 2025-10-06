@@ -13,7 +13,7 @@ def get_coordinates(city_name):
     Geocodes a city name to get its coordinates.
     Returns a tuple (latitude, longitude) or (None, None) on failure.
     """
-    geolocator = Nominatim(user_agent="distance_calculator")
+    geolocator = Nominatim(user_agent="distance_calculator",timeout=10)
     try:
         location = geolocator.geocode(city_name)
         if location:
