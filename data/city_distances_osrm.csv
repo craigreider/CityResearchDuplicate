@@ -1,0 +1,15 @@
+City1,City2,Distance_km,Distance_miles,Duration_minutes,Duration_hours
+"Los Angeles, CA","San Jose, CA",547.31,340.08,385.62,6.43
+"San Francisco, CA","San Jose, CA",77.47,48.13,61.21,1.02
+"San Diego, CA","San Jose, CA",740.53,460.14,526.03,8.77
+"Sacramento, CA","San Jose, CA",188.09,116.87,139.39,2.32
+"Fresno, CA","San Jose, CA",241.79,150.24,182.92,3.05
+"Bakersfield, CA","San Jose, CA",388.33,241.29,277.32,4.62
+"Oakland, CA","San Jose, CA",65.60,40.76,52.86,0.88
+"Rancho Palos Verdes, CA","San Jose, CA",586.58,364.48,422.41,7.04
+"Lemoore, CA","San Jose, CA",271.98,169.00,196.28,3.27
+"Merced, CA","San Jose, CA",149.61,92.96,133.82,2.23
+"Patterson, CA","San Jose, CA",123.34,76.64,94.33,1.57
+"Los Banos, CA","San Jose, CA",128.09,79.59,99.94,1.67
+"Riverside, CA","San Jose, CA",630.18,391.58,446.59,7.44
+"Stockton, CA","San Jose, CA",117.06,72.74,91.56,1.53

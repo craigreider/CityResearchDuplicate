@@ -1,8 +1,10 @@
+from wsgiref import headers
 import requests
 from geopy.geocoders import Nominatim
 import json
 #from geopy.distance import distance as geopy_distance
 import configparser
+import csv
 
 KILOMETERS_IN_MILE = 1.60934
 MILE_IN_KILOMETERS = 0.621371
@@ -88,6 +90,10 @@ def main():
         cities_text=json_file.read()
         cities=json.loads(cities_text)
 
+    data_list=[]
+    headers = ['City1', 'City2', 'Distance_km', 'Distance_miles', 'Duration_minutes', 'Duration_hours'] 
+    data_list.append(headers)
+
     for city1 in cities:    
         #city2 = "San Jose, CA"
         distance, duration = get_driving_distance_osrm(city1, city2)
@@ -95,7 +101,13 @@ def main():
         if distance is not None:
             print(f"Driving distance from {city1} to {city2} is {distance:,.2f} km or {distance*MILE_IN_KILOMETERS:,.2f} miles.")
             print(f"Driving duration is {duration:,.2f} minutes or {(duration/60):,.2f} hours.")
+            row = [city1, city2, f"{distance:,.2f}", f"{distance*MILE_IN_KILOMETERS:,.2f}", f"{duration:,.2f}", f"{(duration/60):,.2f}"]
+            data_list.append(row)
 
+    output_file="./data/city_distances_osrm.csv"
+    with open(output_file, mode='w', newline='', encoding='utf-8') as file:
+        writer = csv.writer(file)
+        writer.writerows(data_list)
 
 if __name__=='__main__':
     main()
