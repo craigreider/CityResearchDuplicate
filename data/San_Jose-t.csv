@@ -1,0 +1,24 @@
+City1,City2,Distance_km,Distance_mi,Duration_min,Duration_hr
+"Bakersfield, CA","San Jose, CA",388.2,241.2,277.31,4.62
+"Clovis, CA","San Jose, CA",246.3,153.0,190.45,3.17
+"Fremont, CA","San Jose, CA",28.6,17.8,26.72,0.45
+"Fresno, CA","San Jose, CA",241.7,150.2,183.40,3.06
+"Lemoore, CA","San Jose, CA",272.0,169.0,196.47,3.27
+"Los Angeles, CA","San Jose, CA",547.4,340.2,385.92,6.43
+"Los Banos, CA","San Jose, CA",128.6,79.9,100.34,1.67
+"Merced, CA","San Jose, CA",186.1,115.7,144.20,2.40
+"Modesto, CA","San Jose, CA",126.8,78.8,102.22,1.70
+"Morgan Hill, CA","San Jose, CA",36.4,22.6,30.44,0.51
+"Oakland, CA","San Jose, CA",66.1,41.0,53.42,0.89
+"Oceanside, CA","San Jose, CA",681.1,423.2,482.76,8.05
+"Paso Robles, CA","San Jose, CA",253.5,157.5,184.51,3.08
+"Patterson, CA","San Jose, CA",123.8,76.9,94.86,1.58
+"Riverside, CA","San Jose, CA",630.4,391.7,446.90,7.45
+"Sacramento, CA","San Jose, CA",188.1,116.9,140.47,2.34
+"Salinas, CA","San Jose, CA",96.5,59.9,72.25,1.20
+"San Diego, CA","San Jose, CA",740.5,460.1,526.15,8.77
+"San Francisco, CA","San Jose, CA",77.7,48.3,61.46,1.02
+"San Jose, CA","San Jose, CA",0.0,0.0,0.00,0.00
+"Stockton, CA","San Jose, CA",117.3,72.9,91.51,1.53
+"Turlock, CA","San Jose, CA",149.3,92.8,117.59,1.96
+"Visalia, CA","San Jose, CA",315.4,196.0,227.62,3.79

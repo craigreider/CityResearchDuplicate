@@ -1,6 +1,6 @@
 #from wsgiref import headers
 import requests
-from geopy.geocoders import Nominatim
+from geopy.geocoders import Nominatim, ArcGIS
 import json
 #from geopy.distance import distance as geopy_distance
 import configparser
@@ -17,7 +17,9 @@ def get_coordinates(city_name):
     Geocodes a city name to get its coordinates.
     Returns a tuple (latitude, longitude) or (None, None) on failure.
     """
-    geolocator = Nominatim(user_agent="distance_calculator",timeout=10)
+    #geolocator = Nominatim(user_agent="distance_calculator",timeout=10)
+    geolocator = ArcGIS(user_agent="distance_calculator",timeout=10)
+
     try:
         location = geolocator.geocode(city_name)
         if location:
@@ -103,7 +105,7 @@ def main():
             print(row)
             results.append(row)
                 
-    output_file="./data/" + city2_file + ".csv"
+    output_file="./data/" + city2_file + "-t.csv"
     with open(output_file, mode='w', newline='', encoding='utf-8') as file:
         writer = csv.writer(file)
         results_sorted=sorted(results)
