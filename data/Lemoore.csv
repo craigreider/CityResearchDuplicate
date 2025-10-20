@@ -1,0 +1,23 @@
+City1,City2,Distance_km,Distance_miles,Duration_minutes,Duration_hours
+"Bakersfield, CA","Lemoore, CA",152.0,94.5,106.28,1.77
+"Clovis, CA","Lemoore, CA",65.9,40.9,52.04,0.87
+"Fremont, CA","Lemoore, CA",303.3,188.4,216.08,3.60
+"Fresno, CA","Lemoore, CA",53.1,33.0,42.51,0.71
+"Lemoore, CA","Lemoore, CA",0.0,0.0,0.00,0.00
+"Los Angeles, CA","Lemoore, CA",328.2,203.9,232.13,3.87
+"Los Banos, CA","Lemoore, CA",152.7,94.9,111.38,1.86
+"Merced, CA","Lemoore, CA",171.5,106.6,141.42,2.36
+"Modesto, CA","Lemoore, CA",202.8,126.0,149.63,2.49
+"Morgan Hill, CA","Lemoore, CA",239.5,148.8,174.37,2.91
+"Oakland, CA","Lemoore, CA",321.3,199.7,223.86,3.73
+"Paso Robles, CA","Lemoore, CA",130.1,80.8,107.69,1.79
+"Patterson, CA","Lemoore, CA",209.5,130.2,145.13,2.42
+"Riverside, CA","Lemoore, CA",411.1,255.4,293.10,4.88
+"Sacramento, CA","Lemoore, CA",343.5,213.4,235.35,3.92
+"Salinas, CA","Lemoore, CA",258.1,160.4,186.42,3.11
+"San Diego, CA","Lemoore, CA",521.4,324.0,372.53,6.21
+"San Francisco, CA","Lemoore, CA",339.0,210.6,239.15,3.99
+"San Jose, CA","Lemoore, CA",272.3,169.2,197.62,3.29
+"Stockton, CA","Lemoore, CA",268.2,166.6,184.69,3.08
+"Turlock, CA","Lemoore, CA",181.3,112.7,134.98,2.25
+"Visalia, CA","Lemoore, CA",46.2,28.7,35.27,0.59

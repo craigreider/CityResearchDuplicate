@@ -83,16 +83,19 @@ def main():
     config = configparser.ConfigParser()
     config.read('config.ini')
     city2 = config.get('General', 'city2')
+    city2_str = city2.split(",", 1)[0]
+    city2_file = city2_str.replace(" ","_")
 
     cities_file="./data/cities.json"
+    #cities_file="./data/cities_test.json"
     with open(cities_file,'r') as json_file:
 
         cities_text=json_file.read()
         cities=json.loads(cities_text)
 
     results=[]
-    headers = ['City1', 'City2', 'Distance_km', 'Distance_miles', 'Duration_minutes', 'Duration_hours'] 
-    results.append(headers)
+    header = ['City1', 'City2', 'Distance_km', 'Distance_miles', 'Duration_minutes', 'Duration_hours'] 
+    #results.append(header)
 
     for city1 in cities:    
         #city2 = "San Jose, CA"
@@ -103,11 +106,13 @@ def main():
             print(f"Drive duration is {duration:,.2f} min / {(duration/60):,.2f} hr.")
             row = [city1, city2, f"{distance:,.1f}", f"{distance*MILE_IN_KILOMETERS:,.1f}", f"{duration:,.2f}", f"{(duration/60):,.2f}"]
             results.append(row)
-
-    output_file="./data/city_distances_osrm.csv"
+                
+    output_file="./data/" + city2_file + ".csv"
     with open(output_file, mode='w', newline='', encoding='utf-8') as file:
         writer = csv.writer(file)
-        writer.writerows(results)
+        results_sorted=sorted(results)
+        results_sorted.insert(0,header)
+        writer.writerows(results_sorted)
 
 if __name__=='__main__':
     main()
