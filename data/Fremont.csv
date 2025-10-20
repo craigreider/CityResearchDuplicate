@@ -1,0 +1,23 @@
+City1,City2,Distance_km,Distance_miles,Duration_minutes,Duration_hours
+"Bakersfield, CA","Fremont, CA",412.8,256.5,294.70,4.91
+"Clovis, CA","Fremont, CA",264.3,164.3,205.72,3.43
+"Fremont, CA","Fremont, CA",0.0,0.0,0.00,0.00
+"Fresno, CA","Fremont, CA",260.3,161.7,198.41,3.31
+"Lemoore, CA","Fremont, CA",296.5,184.2,213.66,3.56
+"Los Angeles, CA","Fremont, CA",571.8,355.3,403.00,6.72
+"Los Banos, CA","Fremont, CA",152.6,94.8,117.31,1.96
+"Merced, CA","Fremont, CA",174.1,108.2,151.20,2.52
+"Modesto, CA","Fremont, CA",112.6,70.0,89.60,1.49
+"Morgan Hill, CA","Fremont, CA",60.8,37.8,47.77,0.80
+"Oakland, CA","Fremont, CA",42.6,26.5,34.89,0.58
+"Paso Robles, CA","Fremont, CA",277.8,172.6,201.69,3.36
+"Patterson, CA","Fremont, CA",104.2,64.7,81.15,1.35
+"Riverside, CA","Fremont, CA",654.7,406.8,463.97,7.73
+"Sacramento, CA","Fremont, CA",168.9,105.0,126.21,2.10
+"Salinas, CA","Fremont, CA",120.9,75.1,89.43,1.49
+"San Diego, CA","Fremont, CA",765.0,475.4,543.40,9.06
+"San Francisco, CA","Fremont, CA",60.5,37.6,51.95,0.87
+"San Jose, CA","Fremont, CA",27.4,17.0,24.00,0.40
+"Stockton, CA","Fremont, CA",97.9,60.8,78.38,1.31
+"Turlock, CA","Fremont, CA",130.1,80.8,104.63,1.74
+"Visalia, CA","Fremont, CA",326.9,203.2,244.54,4.08

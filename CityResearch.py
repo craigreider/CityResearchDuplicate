@@ -89,22 +89,19 @@ def main():
     cities_file="./data/cities.json"
     #cities_file="./data/cities_test.json"
     with open(cities_file,'r') as json_file:
-
         cities_text=json_file.read()
         cities=json.loads(cities_text)
 
     results=[]
     header = ['City1', 'City2', 'Distance_km', 'Distance_miles', 'Duration_minutes', 'Duration_hours'] 
-    #results.append(header)
-
+    print(header)
     for city1 in cities:    
-        #city2 = "San Jose, CA"
         distance, duration = get_driving_distance_osrm(city1, city2)
-
         if distance is not None:
-            print(f"Drive distance from {city1} to {city2} is {distance:,.1f} km / {distance*MILE_IN_KILOMETERS:,.1f} mi.")
-            print(f"Drive duration is {duration:,.2f} min / {(duration/60):,.2f} hr.")
+            #print(f"Drive distance from {city1} to {city2} is {distance:,.1f} km / {distance*MILE_IN_KILOMETERS:,.1f} mi.")
+            #print(f"Drive duration is {duration:,.2f} min / {(duration/60):,.2f} hr.")
             row = [city1, city2, f"{distance:,.1f}", f"{distance*MILE_IN_KILOMETERS:,.1f}", f"{duration:,.2f}", f"{(duration/60):,.2f}"]
+            print(row)
             results.append(row)
                 
     output_file="./data/" + city2_file + ".csv"
