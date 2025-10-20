@@ -68,9 +68,10 @@ def get_driving_distance_osrm(origin_city, destination_city):
             duration_seconds = route['duration']
             
             distance_km = distance_meters / 1000
-            duration_minutes = duration_seconds / 60
-            
-            return distance_km, duration_minutes
+            distance_mi= distance_km * MILE_IN_KILOMETERS
+            duration_min = duration_seconds / 60
+            duration_hr = duration_min / 60
+            return distance_km,distance_mi, duration_min, duration_hr
         else:
             print(f"OSRM API error: {data['code']}")
             return None, None
@@ -93,14 +94,12 @@ def main():
         cities=json.loads(cities_text)
 
     results=[]
-    header = ['City1', 'City2', 'Distance_km', 'Distance_miles', 'Duration_minutes', 'Duration_hours'] 
+    header = ['City1', 'City2', 'Distance_km', 'Distance_mi', 'Duration_min', 'Duration_hr'] 
     print(header)
     for city1 in cities:    
-        distance, duration = get_driving_distance_osrm(city1, city2)
-        if distance is not None:
-            #print(f"Drive distance from {city1} to {city2} is {distance:,.1f} km / {distance*MILE_IN_KILOMETERS:,.1f} mi.")
-            #print(f"Drive duration is {duration:,.2f} min / {(duration/60):,.2f} hr.")
-            row = [city1, city2, f"{distance:,.1f}", f"{distance*MILE_IN_KILOMETERS:,.1f}", f"{duration:,.2f}", f"{(duration/60):,.2f}"]
+        distance_km,distance_mi, duration_min, duration_hr = get_driving_distance_osrm(city1, city2)
+        if distance_km is not None:
+            row = [city1, city2, f"{distance_km:,.1f}", f"{distance_mi:,.1f}", f"{duration_min:,.2f}", f"{duration_hr:,.2f}"]
             print(row)
             results.append(row)
                 

@@ -1,4 +1,4 @@
-City1,City2,Distance_km,Distance_miles,Duration_minutes,Duration_hours
+City1,City2,Distance_km,Distance_mi,Duration_min,Duration_hr
 "Bakersfield, CA","San Jose, CA",388.3,241.3,277.32,4.62
 "Clovis, CA","San Jose, CA",245.9,152.8,190.24,3.17
 "Fremont, CA","San Jose, CA",28.4,17.7,25.45,0.42
@@ -10,6 +10,7 @@ City1,City2,Distance_km,Distance_miles,Duration_minutes,Duration_hours
 "Modesto, CA","San Jose, CA",131.7,81.9,102.78,1.71
 "Morgan Hill, CA","San Jose, CA",36.3,22.6,30.39,0.51
 "Oakland, CA","San Jose, CA",65.6,40.8,52.86,0.88
+"Oceanside, CA","San Jose, CA",681.1,423.2,482.62,8.04
 "Paso Robles, CA","San Jose, CA",253.3,157.4,184.31,3.07
 "Patterson, CA","San Jose, CA",123.3,76.6,94.33,1.57
 "Riverside, CA","San Jose, CA",630.2,391.6,446.59,7.44
