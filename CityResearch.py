@@ -40,8 +40,8 @@ def get_driving_distance_osrm(origin_city, destination_city):
         destination_city (str): The destination city.
         
     Returns:
-        tuple: A tuple containing the distance in kilometers and duration in minutes,
-               or (None, None) if the request fails.
+        tuple: A tuple containing the distance in km and mi and duration in min and hr,
+               or (None, None,None,None) if the request fails.
     """
     # Get coordinates for origin and destination cities
     orig_coords = get_coordinates(origin_city)
@@ -76,11 +76,11 @@ def get_driving_distance_osrm(origin_city, destination_city):
             return distance_km,distance_mi, duration_min, duration_hr
         else:
             print(f"OSRM API error: {data['code']}")
-            return None, None
+            return None, None,None, None
 
     except requests.exceptions.RequestException as e:
         print(f"Network request error: {e}")
-        return None, None
+        return None, None,None, None
 
 def main():
     config = configparser.ConfigParser()
