@@ -19,8 +19,8 @@ def get_coordinates(city_name):
     Geocodes a city name to get its coordinates.
     Returns a tuple (latitude, longitude) or (None, None) on failure.
     """
-    #geolocator = Nominatim(user_agent="distance_calculator",timeout=10)
-    geolocator = ArcGIS(user_agent="distance_calculator",timeout=10)
+    geolocator = Nominatim(user_agent="distance_calculator",timeout=10)
+    #geolocator = ArcGIS(user_agent="distance_calculator",timeout=10)
 
     try:
         location = geolocator.geocode(city_name)
@@ -92,8 +92,8 @@ def main():
     city2_str = city2.split(",", 1)[0]
     city2_file = city2_str.replace(" ","_")
 
-    cities_file="./data/cities.json"
-    #cities_file="./data/cities_test.json"
+    #cities_file="./data/cities.json"
+    cities_file="./data/cities_test.json"
     with open(cities_file,'r') as json_file:
         cities_text=json_file.read()
         cities=json.loads(cities_text)
