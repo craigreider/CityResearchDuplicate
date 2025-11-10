@@ -10,7 +10,9 @@ KILOMETERS_IN_MILE = 1.60934
 MILE_IN_KILOMETERS = 0.621371
 """
 This module provides functionality to calculate driving distances between two cities
-
+curl -A "MyNominatimApp/1.0 (myemail@example.com)" "https://nominatim.openstreetmap.org/search?q=Eiffel+Tower%2C+Paris&format=jsonv2"
+curl -A "MyNominatimApp/1.0 (myemail@example.com)" "https://nominatim.openstreetmap.org/search?q=Eiffel+Tower%2C+Paris&format=jsonv2"
+https://nominatim.openstreetmap.org/search?q=Lemoore%2C+California&format=jsonv2
 """
 def get_coordinates(city_name):
     """
@@ -73,6 +75,7 @@ def get_driving_distance_osrm(origin_city, destination_city):
             distance_mi= distance_km * MILE_IN_KILOMETERS
             duration_min = duration_seconds / 60
             duration_hr = duration_min / 60
+            #test=geopy.util.distance.distance(orig_coords, dest_coords).km
             return distance_km,distance_mi, duration_min, duration_hr
         else:
             print(f"OSRM API error: {data['code']}")
