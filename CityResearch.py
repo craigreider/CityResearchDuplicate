@@ -5,6 +5,7 @@ import json
 #from geopy.distance import distance as geopy_distance
 import configparser
 import csv
+import os
 
 KILOMETERS_IN_MILE = 1.60934
 MILE_IN_KILOMETERS = 0.621371
@@ -91,6 +92,7 @@ def main():
     city2 = config.get('General', 'city2')
     city2_str = city2.split(",", 1)[0]
     city2_file = city2_str.replace(" ","_")
+    app_greeting = os.getenv("APP_GREETING")
 
     #cities_file="./data/cities.json"
     cities_file="./data/cities_test.json"
@@ -100,6 +102,7 @@ def main():
 
     results=[]
     header = ['City1', 'City2', 'Distance_km', 'Distance_mi', 'Duration_min', 'Duration_hr'] 
+    print(app_greeting)
     print(header)
     for city1 in cities:    
         distance_km,distance_mi, duration_min, duration_hr = get_driving_distance_osrm(city1, city2)
