@@ -92,7 +92,7 @@ def main():
     city2 = config.get('General', 'city2')
     city2_str = city2.split(",", 1)[0]
     city2_file = city2_str.replace(" ","_")
-    app_greeting = os.getenv("APP_GREETING")
+    app_greeting = os.getenv("TEMP")
 
     #cities_file="./data/cities.json"
     cities_file="./data/cities_test.json"
