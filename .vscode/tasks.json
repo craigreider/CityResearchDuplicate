@@ -1,0 +1,73 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run Current Python File",
+            "type": "shell",
+            "command": "${command:python.interpreterPath}",
+            "args": [
+                "${file}"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "focus": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Run Pytest Tests",
+            "type": "shell",
+            "command": "${command:python.interpreterPath}",
+            "args": [
+                "-m",
+                "pytest",
+                "."
+            ],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "focus": false
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "echo workspaceFolder",
+            "type": "shell",
+            "command": "echo workspaceFolder ${workspaceFolder}",
+            "problemMatcher": []
+        },
+        {
+            "label": "echo cwd",
+            "type": "shell",
+            "command": "echo cwd ${cwd}",
+            "problemMatcher": []
+        },
+        {
+            "label": "echo file",
+            "type": "shell",
+            "command": "echo file ${file}",
+            "problemMatcher": []
+        },
+        {
+            "label": "echo execPath",
+            "type": "shell",
+            "command": "echo execPath ${execPath}",
+			"problemMatcher": []
+        },
+        {
+            "label": "echo env:USERNAME",
+            "type": "shell",
+            "command": "echo env:USERNAME ${env:USERNAME}",
+			"problemMatcher": []
+        }
+    ]
+}
