@@ -96,9 +96,17 @@ def main():
     config.read("config.ini")
     city2 = config.get("General", "city2")
     city2_str = city2.split(",", 1)[0]
-    city2_file = city2_str.replace(" ", "_")
+    city2_file = city2_str.replace(" ","_")
+    app_greeting = os.getenv("TEMP")
 
-    app_greeting = os.getenv("APP_GREETING")
+    #cities_file="./data/cities.json"
+    cities_file="./data/cities_test.json"
+    with open(cities_file,'r') as json_file:
+        cities_text=json_file.read()
+        cities=json.loads(cities_text)
+
+    results=[]
+    header = ['City1', 'City2', 'Distance_km', 'Distance_mi', 'Duration_min', 'Duration_hr'] 
     print(app_greeting)
     # cities_file="./data/cities.json"
     cities_file = "./data/cities_test.json"
