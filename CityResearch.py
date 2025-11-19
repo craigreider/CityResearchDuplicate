@@ -3,7 +3,7 @@
 import configparser
 import csv
 import json
-import os
+import os 
 
 import requests
 from geopy.geocoders import ArcGIS, Nominatim
@@ -16,7 +16,20 @@ curl -A "MyNominatimApp/1.0 (myemail@example.com)" "https://nominatim.openstreet
 curl -A "MyNominatimApp/1.0 (myemail@example.com)" "https://nominatim.openstreetmap.org/search?q=Eiffel+Tower%2C+Paris&format=jsonv2"
 https://nominatim.openstreetmap.org/search?q=Lemoore%2C+California&format=jsonv2
 """
-
+def get_zipcode_from_city(city_name, country='US'):
+    """
+    Retrieves the postal code for a given city using Nominatim.
+    """
+    geolocator = Nominatim(user_agent="city_to_zip_mapper")
+    try:
+        location = geolocator.geocode(f"{city_name}, {country}")
+        if location and 'address' in location.raw and 'postcode' in location.raw['address']:
+            return location.raw['address']['postcode']
+        else:
+            return None
+    except Exception as e:
+        print(f"Error geocoding {city_name}: {e}")
+        return None
 
 def get_coordinates(city_name):
     """
@@ -123,7 +136,12 @@ def main():
         "Duration_min",
         "Duration_hr",
     ]
-
+    city = "2880, Raeford Road, Conway, Orange County, Florida, 32806, United States"
+    zip_code = get_zipcode_from_city(city)
+    if zip_code:
+        print(f"The zip code for {city} is: {zip_code}")
+    else:
+        print(f"Could not find a zip code for {city}.")
     print(header)
     for city1 in cities:
         distance_km, distance_mi, duration_min, duration_hr = get_driving_distance_osrm(
